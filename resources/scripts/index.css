@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --dika-bg: url('https://i.ibb.co.com/fdyCcG4K/6674bee4254f31a82db367db2c89ed0f.jpg');
+    --glass-bg: rgba(0, 0, 0, 0.45);
+    --glass-card: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --accent: #6366f1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif !important;
+    background-image: var(--dika-bg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+}
+
+#app {
+    background: var(--glass-bg);
+    min-height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+.bg-neutral-900, .bg-neutral-800, .bg-secondary, .ContentBox___styledDiv-sc-166099-0 {
+    background: var(--glass-card) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 16px !important;
+}
+
+button, .button {
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+}
+
+input, select, textarea {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+.Sidebar__LogoContainer-sc-1v3sc3v-0::after {
+    content: "DIKA MARKET";
+    display: block;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    text-align: center;
+      }
