@@ -8,19 +8,25 @@ echo "-------------------------------------------------------"
 
 cd /var/www/pterodactyl
 
-echo "Menyalin file tema dari repository ke folder panel..."
-cp -rv /root/dika-market-theme/resources/scripts/* ./resources/scripts/
+echo "Menyiapkan folder tujuan..."
+mkdir -p resources/scripts/components/dashboard
+mkdir -p resources/scripts/components/auth
+mkdir -p resources/scripts/components/server/files
+mkdir -p resources/scripts/components/server/settings
+mkdir -p resources/scripts/components/account
+mkdir -p resources/scripts/components/admin
+
+echo "Menyalin file tema dari /root/dika-theme..."
+cp -rv /root/dika-theme/resources/scripts/* ./resources/scripts/
 
 echo "Membersihkan cache panel..."
 php artisan view:clear
 php artisan cache:clear
 
-echo "Memulai proses Build (ini akan memakan waktu 1-3 menit)..."
-export NODE_OPTIONS=--max_old_space_size=1024
+echo "Memulai proses Build (Sabar ya, Dika Market sedang diproses)..."
 yarn install
 yarn build:production
 
 echo "-------------------------------------------------------"
-echo "   INSTALLASI SELESAI! SILAKAN REFRESH DASHBOARD       "
+echo "   INSTALLASI SELESAI! TAMPILAN DIKA MARKET AKTIF      "
 echo "-------------------------------------------------------"
-
